@@ -181,6 +181,13 @@ export function GalleryPage() {
                         playsInline
                         controls
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const el =
+                            e.currentTarget.closest<HTMLDivElement>(
+                              "[data-ocid]",
+                            );
+                          if (el) el.style.display = "none";
+                        }}
                       />
                       {/* Play icon overlay — hides on hover */}
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity duration-300">

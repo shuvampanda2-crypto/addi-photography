@@ -1,7 +1,7 @@
-import { r as reactExports, j as jsxRuntimeExports, L as Link } from "./index-DDrqrKQT.js";
-import { G as GALLERY_ITEMS, S as ScrollReveal, L as Lightbox } from "./galleryData-D099-s3X.js";
-import { A as ArrowLeft } from "./arrow-left-Dy1ReDun.js";
-import { C as Camera, o as motion } from "./proxy-BkfWjRIU.js";
+import { r as reactExports, j as jsxRuntimeExports, L as Link } from "./index-CKKAdr2o.js";
+import { G as GALLERY_ITEMS, S as ScrollReveal, L as Lightbox } from "./galleryData-DNDcPWMG.js";
+import { A as ArrowLeft } from "./arrow-left-CoiDDYMX.js";
+import { C as Camera, o as motion } from "./proxy-D0_HMguB.js";
 function GalleryPage() {
   const [activeTab, setActiveTab] = reactExports.useState("all");
   const [lightboxImages, setLightboxImages] = reactExports.useState([]);
@@ -144,7 +144,13 @@ function GalleryPage() {
                         loop: true,
                         playsInline: true,
                         controls: true,
-                        className: "w-full h-full object-cover"
+                        className: "w-full h-full object-cover",
+                        onError: (e) => {
+                          const el = e.currentTarget.closest(
+                            "[data-ocid]"
+                          );
+                          if (el) el.style.display = "none";
+                        }
                       }
                     ),
                     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 flex items-center justify-center pointer-events-none group-hover:opacity-0 transition-opacity duration-300", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-14 h-14 rounded-full bg-black/60 border border-white/30 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(

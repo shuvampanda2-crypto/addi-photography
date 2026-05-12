@@ -67,6 +67,13 @@ export function GallerySection() {
                         loop
                         playsInline
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        onError={(e) => {
+                          const el =
+                            e.currentTarget.closest<HTMLDivElement>(
+                              "[data-ocid]",
+                            );
+                          if (el) el.style.display = "none";
+                        }}
                       />
                       {/* Play icon overlay */}
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

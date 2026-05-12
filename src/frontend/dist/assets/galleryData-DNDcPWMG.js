@@ -1,5 +1,5 @@
-import { j as jsxRuntimeExports, r as reactExports } from "./index-DDrqrKQT.js";
-import { c as createLucideIcon, o as motion, A as AnimatePresence, X } from "./proxy-BkfWjRIU.js";
+import { j as jsxRuntimeExports, r as reactExports } from "./index-CKKAdr2o.js";
+import { c as createLucideIcon, o as motion, A as AnimatePresence, X } from "./proxy-D0_HMguB.js";
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -252,21 +252,21 @@ const GALLERY_ITEMS = [
   {
     id: "v1",
     type: "video",
-    src: "/assets/whatsapp_video_2026-05-12_at_6.28.46_pm-019e1d1e-5b56-733e-9586-dbeb72366efc.mp4",
+    src: "/assets/gallery-video-1.mp4",
     title: "Brand Film 1",
     category: "brand-promotions"
   },
   {
     id: "v2",
     type: "video",
-    src: "/assets/whatsapp_video_2026-05-12_at_6.28.46_pm-019e1cb8-7c23-7415-8e41-a707f82d147a.mp4",
+    src: "/assets/gallery-video-2.mp4",
     title: "Brand Film 2",
     category: "brand-promotions"
   },
   {
     id: "v3",
     type: "video",
-    src: "/assets/whatsapp_video_2026-05-12_at_6.28.37_pm-019e1cb8-8330-75b8-99e6-11ee5d8579c0.mp4",
+    src: "/assets/gallery-video-3.mp4",
     title: "Brand Film 3",
     category: "brand-promotions"
   }

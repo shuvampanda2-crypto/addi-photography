@@ -79,7 +79,7 @@ export function ContactSection({ settings, onSubmit }: ContactSectionProps) {
     {
       Icon: MapPin,
       label: "Address",
-      value: settings?.address || "CDA Sector 13, Cuttack, Odisha",
+      value: settings?.address || "CDA Sector 13 Cuttack Odisha",
     },
     {
       Icon: Mail,
@@ -89,7 +89,7 @@ export function ContactSection({ settings, onSubmit }: ContactSectionProps) {
     {
       Icon: Phone,
       label: "Phone",
-      value: settings?.phone || "+91 82497 23248",
+      value: settings?.phone || "+91 8249723248",
       href: "tel:+918249723248",
     },
   ];

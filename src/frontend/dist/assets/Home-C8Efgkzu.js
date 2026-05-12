@@ -1,7 +1,7 @@
-import { u as useNavigate, j as jsxRuntimeExports, r as reactExports } from "./index-DDrqrKQT.js";
-import { c as createLucideIcon, f as frame, a as cancelFrame, i as interpolate, s as supportsViewTimeline, b as supportsScrollTimeline, p as progress, v as velocityPerSecond, d as isHTMLElement, e as defaultOffset$1, g as clamp, n as noop, r as resize, h as frameData, u as useConstant, j as useIsomorphicLayoutEffect, k as invariant, m as motionValue, M as MotionConfigContext, l as collectMotionValues, X, A as AnimatePresence, o as motion, C as Camera } from "./proxy-BkfWjRIU.js";
-import { M as Mail, I as Image, S as Star, u as useGalleryImages, a as useTestimonials, b as useServices, c as useSiteSettings, d as useSaveContact } from "./queries-B7Z_c7KQ.js";
-import { S as ScrollReveal, G as GALLERY_ITEMS, L as Lightbox } from "./galleryData-D099-s3X.js";
+import { u as useNavigate, j as jsxRuntimeExports, r as reactExports } from "./index-CKKAdr2o.js";
+import { c as createLucideIcon, f as frame, a as cancelFrame, i as interpolate, s as supportsViewTimeline, b as supportsScrollTimeline, p as progress, v as velocityPerSecond, d as isHTMLElement, e as defaultOffset$1, g as clamp, n as noop, r as resize, h as frameData, u as useConstant, j as useIsomorphicLayoutEffect, k as invariant, m as motionValue, M as MotionConfigContext, l as collectMotionValues, X, A as AnimatePresence, o as motion, C as Camera } from "./proxy-D0_HMguB.js";
+import { M as Mail, I as Image, S as Star, u as useGalleryImages, a as useTestimonials, b as useServices, c as useSiteSettings, d as useSaveContact } from "./queries-DZHUXCkh.js";
+import { S as ScrollReveal, G as GALLERY_ITEMS, L as Lightbox } from "./galleryData-DNDcPWMG.js";
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -1406,7 +1406,7 @@ Message: ${form.message}`
     {
       Icon: MapPin,
       label: "Address",
-      value: (settings == null ? void 0 : settings.address) || "CDA Sector 13, Cuttack, Odisha"
+      value: (settings == null ? void 0 : settings.address) || "CDA Sector 13 Cuttack Odisha"
     },
     {
       Icon: Mail,
@@ -1416,7 +1416,7 @@ Message: ${form.message}`
     {
       Icon: Phone,
       label: "Phone",
-      value: (settings == null ? void 0 : settings.phone) || "+91 82497 23248",
+      value: (settings == null ? void 0 : settings.phone) || "+91 8249723248",
       href: "tel:+918249723248"
     }
   ];
@@ -1980,7 +1980,13 @@ function GallerySection() {
                     muted: true,
                     loop: true,
                     playsInline: true,
-                    className: "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className: "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105",
+                    onError: (e) => {
+                      const el = e.currentTarget.closest(
+                        "[data-ocid]"
+                      );
+                      if (el) el.style.display = "none";
+                    }
                   }
                 ),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 flex items-center justify-center pointer-events-none", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 h-12 rounded-full bg-black/50 border border-white/40 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -2110,7 +2116,7 @@ function HeroSection({ heading, subheading }) {
               className: "font-display block leading-[0.95] text-white",
               style: {
                 fontFamily: "var(--font-display)",
-                fontSize: "clamp(4rem, 10vw, 8rem)",
+                fontSize: "clamp(3rem, 7.5vw, 6rem)",
                 fontWeight: 700
               },
               children: word

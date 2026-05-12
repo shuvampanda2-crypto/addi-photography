@@ -67,7 +67,7 @@ export function HeroSection({ heading, subheading }: HeroSectionProps) {
                 className="font-display block leading-[0.95] text-white"
                 style={{
                   fontFamily: "var(--font-display)",
-                  fontSize: "clamp(4rem, 10vw, 8rem)",
+                  fontSize: "clamp(3rem, 7.5vw, 6rem)",
                   fontWeight: 700,
                 }}
               >
