@@ -1,0 +1,25 @@
+{
+  "overview": "Addi Photography is a premium cinematic photography portfolio website with a dark luxury aesthetic, smooth animations, and a complete admin panel for managing all content.",
+  "features": [
+    "Cinematic hero section with fullscreen imagery and animations",
+    "Portfolio masonry grid with category filtering and lightbox",
+    "About section with animated counters",
+    "Services showcase with hover effects",
+    "Testimonials carousel",
+    "Editorial blog section",
+    "Immersive gallery wall",
+    "Premium contact form",
+    "Admin panel for full content management",
+    "Mobile-first responsive design"
+  ],
+  "category": "portfolio",
+  "tags": [
+    "photography",
+    "portfolio",
+    "luxury",
+    "cinematic",
+    "dark-theme",
+    "admin-panel"
+  ],
+  "last_updated": "2026-05-11T05:36:19.416Z"
+}

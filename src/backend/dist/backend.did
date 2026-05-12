@@ -1,0 +1,119 @@
+type UserId = principal;
+type Testimonial = 
+ record {
+   clientImage: text;
+   clientName: text;
+   id: nat;
+   order: nat;
+   rating: nat;
+   review: text;
+ };
+type SiteSettings = 
+ record {
+   aboutImage: text;
+   aboutText: text;
+   address: text;
+   awards: nat;
+   businessName: text;
+   email: text;
+   facebook: text;
+   happyClients: nat;
+   heroHeading: text;
+   heroSubheading: text;
+   instagram: text;
+   phone: text;
+   projectsCompleted: nat;
+   tagline: text;
+   twitter: text;
+   yearsExp: nat;
+   youtube: text;
+ };
+type Service = 
+ record {
+   description: text;
+   icon: text;
+   id: nat;
+   order: nat;
+   title: text;
+ };
+type PortfolioItem = 
+ record {
+   category: text;
+   description: text;
+   featured: bool;
+   id: nat;
+   imageUrl: text;
+   order: nat;
+   title: text;
+ };
+type GalleryImage = 
+ record {
+   id: nat;
+   imageUrl: text;
+   order: nat;
+   title: text;
+ };
+type ContactMessage = 
+ record {
+   budget: text;
+   createdAt: int;
+   email: text;
+   id: nat;
+   message: text;
+   name: text;
+   "service": text;
+ };
+type BlogPost = 
+ record {
+   category: text;
+   content: text;
+   date: text;
+   excerpt: text;
+   id: nat;
+   imageUrl: text;
+   published: bool;
+   title: text;
+ };
+service : {
+  addAdmin: (newAdmin: UserId) -> ();
+  addBlogPost: (title: text, category: text, excerpt: text, imageUrl: 
+   text, content: text, date: text, published: bool) -> (BlogPost);
+  addGalleryImage: (imageUrl: text, title: text, order: nat) ->
+   (GalleryImage);
+  addPortfolioItem: (title: text, category: text, imageUrl: text,
+   description: text, featured: bool, order: nat) -> (PortfolioItem);
+  addService: (title: text, description: text, icon: text, order: nat) ->
+   (Service);
+  addTestimonial: (clientName: text, clientImage: text, review: text, rating:
+   nat, order: nat) -> (Testimonial);
+  deleteBlogPost: (id: nat) -> (bool);
+  deleteGalleryImage: (id: nat) -> (bool);
+  deletePortfolioItem: (id: nat) -> (bool);
+  deleteService: (id: nat) -> (bool);
+  deleteTestimonial: (id: nat) -> (bool);
+  getBlogPost: (id: nat) -> (opt BlogPost) query;
+  getPortfolioItem: (id: nat) -> (opt PortfolioItem) query;
+  getSettings: () -> (SiteSettings) query;
+  isAdmin: () -> (bool) query;
+  listAdmins: () -> (vec UserId) query;
+  listBlogPosts: () -> (vec BlogPost) query;
+  listBlogPostsByCategory: (category: text) -> (vec BlogPost) query;
+  listContactMessages: () -> (vec ContactMessage) query;
+  listGalleryImages: () -> (vec GalleryImage) query;
+  listPortfolioItems: () -> (vec PortfolioItem) query;
+  listPortfolioItemsByCategory: (category: text) -> (vec PortfolioItem) query;
+  listPublishedBlogPosts: () -> (vec BlogPost) query;
+  listServices: () -> (vec Service) query;
+  listTestimonials: () -> (vec Testimonial) query;
+  removeAdmin: (target: UserId) -> ();
+  saveContactMessage: (name: text, email: text, "service": text, budget:
+   text, message: text) -> (ContactMessage);
+  setFirstAdmin: () -> (bool);
+  toggleFeaturedPortfolioItem: (id: nat) -> (bool);
+  updateBlogPost: (post: BlogPost) -> (bool);
+  updateGalleryImage: (image: GalleryImage) -> (bool);
+  updatePortfolioItem: (item: PortfolioItem) -> (bool);
+  updateService: (svc: Service) -> (bool);
+  updateSettings: (s: SiteSettings) -> ();
+  updateTestimonial: (t: Testimonial) -> (bool);
+}
