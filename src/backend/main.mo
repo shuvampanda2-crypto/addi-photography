@@ -29,19 +29,19 @@ actor {
     var settings = {
       businessName = "Addi Photography";
       tagline = "Capturing timeless stories through cinematic photography";
-      email = "hello@addiphotography.com";
-      phone = "+1 (555) 000-0000";
-      address = "123 Studio Lane, New York, NY 10001";
+      email = "addiphotographybjevents@gmail.com";
+      phone = "+91 8249723248";
+      address = "CDA Sector 13 Cuttack Odisha";
       instagram = "";
       facebook = "";
       twitter = "";
       youtube = "";
-      heroHeading = "Capturing Timeless Moments";
+      heroHeading = "Capturing Moments, Creating Memories";
       heroSubheading = "Award-winning cinematic photography for weddings, portraits & more";
       aboutText = "I am a passionate photographer dedicated to telling authentic stories through the lens. With years of experience in cinematic and editorial photography, I bring artistry and precision to every shoot.";
       aboutImage = "";
       yearsExp = 10;
-      happyClients = 500;
+      happyClients = 100;
       projectsCompleted = 800;
       awards = 24;
     };
