@@ -4,7 +4,6 @@ import {
   useSaveContact,
   useServices,
   useSiteSettings,
-  useTestimonials,
 } from "@/lib/queries";
 import type { SiteSettings } from "@/lib/types";
 import { useState } from "react";
@@ -47,51 +46,93 @@ const DEFAULT_SERVICES = [
   },
 ];
 
-const DEFAULT_TESTIMONIALS = [
+const _DEFAULT_TESTIMONIALS = [
   {
     id: 1n,
-    clientName: "Rahul Kumar Panda",
+    clientName: "Rinki Sahoo",
     clientImage: "",
-    review:
-      "Absolutely loved the photography! The pictures were natural, cinematic, and beautifully edited. Highly recommended for weddings and special events.",
+    review: "Budget friendly photography and quality is super",
     rating: 5n,
     order: 1n,
   },
   {
     id: 2n,
-    clientName: "Priya Mehta",
+    clientName: "Guruprasad Behera",
     clientImage: "",
-    review:
-      "Very professional and friendly photographer. The delivery was fast and the quality was outstanding. Everyone in my family loved the photos.",
+    review: "Best capturing of moments by their professional team",
     rating: 5n,
     order: 2n,
   },
   {
     id: 3n,
-    clientName: "Aman Verma",
+    clientName: "Trilochan Pradhan",
     clientImage: "",
     review:
-      "Best photography experience I've had till now. Creative poses, amazing editing, and great attention to detail. Truly premium work!",
+      "Excellent service by the photography team and the owner Kiran is best as he gave full effort",
     rating: 5n,
     order: 3n,
   },
   {
     id: 4n,
-    clientName: "Sneha Patel",
+    clientName: "Lucky Pradhan",
     clientImage: "",
-    review:
-      "Our pre-wedding shoot turned out better than we imagined. The cinematic style and color grading looked absolutely stunning.",
+    review: "Good service with best budget and quality is also best",
     rating: 5n,
     order: 4n,
   },
   {
     id: 5n,
-    clientName: "Arjun Mishra",
+    clientName: "dasventures .2025",
     clientImage: "",
     review:
-      "Highly satisfied with both photography and videography. Every moment was captured perfectly and the final output looked amazing.",
+      "The quality of work was truly outstanding. From pre-wedding moments to the final wedding rituals, everything was captured beautifully. The cinematic wedding film looked like a movie. We are extremely satisfied with the photos, album design, and overall experience.",
     rating: 5n,
     order: 5n,
+  },
+  {
+    id: 6n,
+    clientName: "kalpana sahoo",
+    clientImage: "",
+    review:
+      "You are a true artist! I cannot believe how amazing this turned out. You really caught the perfect moment. I am so impressed with this. Wow, these photos and the video are just beautiful! Thank you so much for your hard work. You made me feel so comfortable and the results are magical.",
+    rating: 5n,
+    order: 6n,
+  },
+  {
+    id: 7n,
+    clientName: "Bhabani",
+    clientImage: "",
+    review:
+      "Amazing experience from start to finish. The team handled our wedding coverage perfectly and delivered beautiful memories that we will cherish forever. Excellent photography skills, cinematic videography, and great customer service. Highly recommended!",
+    rating: 5n,
+    order: 7n,
+  },
+  {
+    id: 8n,
+    clientName: "Tiki Sahoo",
+    clientImage: "",
+    review:
+      "Choosing this photography team was one of the best decisions for our wedding. They captured every emotion, smile, and special moment beautifully. The entire team was friendly, cooperative, and hardworking. We truly loved the final photos and cinematic wedding film.",
+    rating: 5n,
+    order: 8n,
+  },
+  {
+    id: 9n,
+    clientName: "Rosemary Spa cum saloon",
+    clientImage: "",
+    review:
+      "Excellent wedding photography service! Beautiful candid shots, cinematic video, and very professional behavior. Thank you for capturing our special day so perfectly. Highly recommended!",
+    rating: 5n,
+    order: 9n,
+  },
+  {
+    id: 10n,
+    clientName: "Gautam Isharani",
+    clientImage: "",
+    review:
+      "Best Photography and videography at our marriage professional person with good camera knowledge",
+    rating: 5n,
+    order: 10n,
   },
 ];
 
@@ -100,7 +141,7 @@ const DEFAULT_TESTIMONIALS = [
 export function HomePage() {
   // Queries
   const { data: galleryData } = useGalleryImages();
-  const { data: testimonialData } = useTestimonials();
+
   const { data: serviceData } = useServices();
   const { data: settingsRaw } = useSiteSettings();
   const settings = settingsRaw as SiteSettings | null | undefined;
@@ -108,10 +149,7 @@ export function HomePage() {
 
   // Resolved data (fallback to defaults while loading)
   const _gallery = galleryData ?? [];
-  const testimonials =
-    testimonialData && testimonialData.length > 0
-      ? testimonialData
-      : DEFAULT_TESTIMONIALS;
+
   const services =
     serviceData && serviceData.length > 0 ? serviceData : DEFAULT_SERVICES;
 
@@ -134,7 +172,7 @@ export function HomePage() {
 
       <ShowcaseSection />
 
-      <TestimonialsSection testimonials={testimonials} />
+      <TestimonialsSection />
       <EquipmentSection />
 
       <GallerySection />

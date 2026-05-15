@@ -1,7 +1,7 @@
-import { u as useNavigate, j as jsxRuntimeExports, r as reactExports } from "./index-BuRRn5fK.js";
-import { c as createLucideIcon, f as frame, a as cancelFrame, i as interpolate, s as supportsViewTimeline, b as supportsScrollTimeline, p as progress, v as velocityPerSecond, d as isHTMLElement, e as defaultOffset$1, g as clamp, n as noop, r as resize, h as frameData, u as useConstant, j as useIsomorphicLayoutEffect, k as invariant, m as motionValue, M as MotionConfigContext, l as collectMotionValues, X, A as AnimatePresence, o as motion, C as Camera } from "./proxy-CbCgzUOk.js";
-import { M as Mail, I as Image, S as Star, u as useGalleryImages, a as useTestimonials, b as useServices, c as useSiteSettings, d as useSaveContact } from "./queries-DDd_pkAg.js";
-import { S as ScrollReveal, G as GALLERY_ITEMS, L as Lightbox } from "./galleryData-DMFnxkxo.js";
+import { u as useNavigate, j as jsxRuntimeExports, r as reactExports } from "./index-CdkRekiU.js";
+import { c as createLucideIcon, f as frame, a as cancelFrame, i as interpolate, s as supportsViewTimeline, b as supportsScrollTimeline, p as progress, v as velocityPerSecond, d as isHTMLElement, e as defaultOffset$1, g as clamp, n as noop, r as resize, h as frameData, u as useConstant, j as useIsomorphicLayoutEffect, k as invariant, m as motionValue, M as MotionConfigContext, l as collectMotionValues, X, A as AnimatePresence, o as motion, C as Camera } from "./proxy-Ra_7zoqw.js";
+import { M as Mail, I as Image, S as Star, u as useGalleryImages, a as useServices, b as useSiteSettings, c as useSaveContact } from "./queries-BM1XOuhf.js";
+import { S as ScrollReveal, G as GALLERY_ITEMS, L as Lightbox } from "./galleryData-COaqjaa-.js";
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -1756,182 +1756,82 @@ function CtaSection() {
     }
   );
 }
+const LOGOS = [
+  { id: "nikon", src: "/assets/images/logo-nikon.png", alt: "Nikon" },
+  { id: "sony", src: "/assets/images/logo-sony.png", alt: "Sony" },
+  { id: "canvera", src: "/assets/images/logo-canvera.png", alt: "Canvera" },
+  { id: "dji", src: "/assets/images/logo-dji.png", alt: "DJI" }
+];
+const MARQUEE_ITEMS$1 = [
+  ...LOGOS.map((l) => ({ ...l, uid: `a-${l.id}` })),
+  ...LOGOS.map((l) => ({ ...l, uid: `b-${l.id}` })),
+  ...LOGOS.map((l) => ({ ...l, uid: `c-${l.id}` }))
+];
 function EquipmentSection() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "section",
-    {
-      id: "equipment",
-      className: "py-28 lg:py-36 bg-[#0B0B0B] overflow-hidden",
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-[1200px] mx-auto px-6 md:px-12 lg:px-20 text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollReveal, { children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center mb-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "svg",
-          {
-            width: "48",
-            height: "48",
-            viewBox: "0 0 48 48",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-            "aria-hidden": "true",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "rect",
-                {
-                  x: "4",
-                  y: "14",
-                  width: "40",
-                  height: "26",
-                  rx: "3",
-                  stroke: "#C7A46C",
-                  strokeWidth: "2"
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "24", cy: "27", r: "8", stroke: "#C7A46C", strokeWidth: "2" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "circle",
-                {
-                  cx: "24",
-                  cy: "27",
-                  r: "4",
-                  stroke: "#C7A46C",
-                  strokeWidth: "1.5"
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "path",
-                {
-                  d: "M16 14V11C16 10.4477 16.4477 10 17 10H22L24 7H24H24L26 10H31C31.5523 10 32 10.4477 32 11V14",
-                  stroke: "#C7A46C",
-                  strokeWidth: "2",
-                  strokeLinecap: "round"
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "39", cy: "19", r: "2", fill: "#C7A46C" })
-            ]
-          }
-        ) }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollReveal, { delay: 0.08, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-center gap-4 mb-6", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-px w-16 bg-white/20" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "span",
-            {
-              className: "text-[10px] tracking-[0.45em] uppercase text-white/55 font-medium",
-              style: { fontFamily: "var(--font-display)" },
-              children: "We Use Professional"
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-px w-16 bg-white/20" })
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollReveal, { delay: 0.14, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-baseline justify-center gap-4 md:gap-6 flex-wrap mb-2", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            motion.span,
-            {
-              initial: { opacity: 0, y: 30 },
-              whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true },
-              transition: {
-                duration: 0.7,
-                delay: 0.15,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              },
-              className: "text-white font-bold italic leading-none select-none",
-              style: {
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(3.2rem, 9vw, 7rem)",
-                letterSpacing: "-0.02em"
-              },
-              children: "Nikon"
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            motion.span,
-            {
-              initial: { opacity: 0, scale: 0.8 },
-              whileInView: { opacity: 1, scale: 1 },
-              viewport: { once: true },
-              transition: { duration: 0.5, delay: 0.28 },
-              className: "font-bold leading-none select-none",
-              style: {
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(1.8rem, 4vw, 3.5rem)",
-                color: "#C7A46C"
-              },
-              children: "&"
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            motion.span,
-            {
-              initial: { opacity: 0, y: 30 },
-              whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true },
-              transition: {
-                duration: 0.7,
-                delay: 0.32,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              },
-              className: "font-black tracking-tight leading-none select-none",
-              style: {
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(3.2rem, 9vw, 7rem)",
-                color: "#C7A46C",
-                letterSpacing: "0.04em"
-              },
-              children: "SONY"
-            }
-          )
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollReveal, { delay: 0.22, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-baseline justify-center gap-4 md:gap-6 flex-wrap", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            motion.span,
-            {
-              initial: { opacity: 0, y: 30 },
-              whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true },
-              transition: {
-                duration: 0.7,
-                delay: 0.42,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              },
-              className: "font-black tracking-widest leading-none select-none",
-              style: {
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(3.2rem, 9vw, 7rem)",
-                color: "transparent",
-                WebkitTextStroke: "2px #C7A46C",
-                letterSpacing: "0.12em"
-              },
-              children: "DJI"
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            motion.span,
-            {
-              initial: { opacity: 0, y: 30 },
-              whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true },
-              transition: {
-                duration: 0.7,
-                delay: 0.52,
-                ease: [0.25, 0.46, 0.45, 0.94]
-              },
-              className: "text-white font-black tracking-widest uppercase leading-none select-none",
-              style: {
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(3.2rem, 9vw, 7rem)",
-                letterSpacing: "0.12em"
-              },
-              children: "DRONE"
-            }
-          )
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollReveal, { delay: 0.32, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 flex items-center justify-center gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-px w-24 bg-gradient-to-r from-transparent to-accent/30" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-1.5 h-1.5 bg-accent/40 rotate-45" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-px w-24 bg-gradient-to-l from-transparent to-accent/30" })
-        ] }) })
-      ] })
-    }
-  );
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { id: "equipment", className: "py-16 bg-[#0B0B0B] overflow-hidden", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("style", { children: `
+        @keyframes logo-marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-33.333%); }
+        }
+        .logo-marquee-track {
+          animation: logo-marquee 22s linear infinite;
+        }
+        .logo-marquee-track:hover {
+          animation-play-state: paused;
+        }
+      ` }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mb-10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "h2",
+      {
+        className: "text-xs tracking-[0.35em] uppercase text-white/40 font-medium",
+        style: { fontFamily: "var(--font-display)" },
+        children: "Our Equipment's"
+      }
+    ) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative flex overflow-hidden select-none", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "logo-marquee-track flex shrink-0 items-center gap-0", children: MARQUEE_ITEMS$1.map((logo) => /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "img",
+        {
+          src: logo.src,
+          alt: logo.alt,
+          className: "h-[110px] w-auto object-contain mx-10",
+          loading: "lazy",
+          draggable: false
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "span",
+        {
+          style: {
+            color: "rgba(255,255,255,0.18)",
+            padding: "0 0.2rem",
+            fontSize: "0.5rem"
+          },
+          children: "●"
+        }
+      )
+    ] }, logo.uid)) }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mt-12", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "p",
+        {
+          className: "text-[10px] tracking-[0.3em] uppercase font-medium mb-5",
+          style: { color: "#C7A46C", fontFamily: "var(--font-display)" },
+          children: "Our Printing Partner"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "img",
+        {
+          src: "/assets/images/logo-printing-partner.png",
+          alt: "Printing Partner",
+          className: "h-[90px] w-auto object-contain mx-auto",
+          loading: "lazy"
+        }
+      )
+    ] })
+  ] });
 }
 function GallerySection() {
   const navigate = useNavigate();
@@ -2411,89 +2311,93 @@ function ShowcaseSection() {
     }
   );
 }
-function TestimonialCard({
-  t,
-  isActive
-}) {
+const TESTIMONIALS = [
+  {
+    id: 1,
+    name: "Rinki Sahoo",
+    stars: 5,
+    text: "Budget friendly photography and quality is super"
+  },
+  {
+    id: 2,
+    name: "Guruprasad Behera",
+    stars: 5,
+    text: "Best capturing of moments by their professional team"
+  },
+  {
+    id: 3,
+    name: "Trilochan Pradhan",
+    stars: 5,
+    text: "Excellent service by the photography team and the owner Kiran is best as he gave full effort"
+  },
+  {
+    id: 4,
+    name: "Lucky Pradhan",
+    stars: 5,
+    text: "Good service with best budget and quality is also best"
+  },
+  {
+    id: 5,
+    name: "dasventures",
+    stars: 5,
+    text: "The quality of work was truly outstanding. From pre-wedding moments to the final wedding rituals, everything was captured beautifully. The cinematic wedding film looked like a movie. We are extremely satisfied with the photos, album design, and overall experience."
+  },
+  {
+    id: 6,
+    name: "Kalpana Sahoo",
+    stars: 5,
+    text: "You are a true artist! I can't believe how amazing this turned out. You really caught the perfect moment. I'm so impressed with this. Wow, these photos and the video are just beautiful! Thank you so much for your hard work."
+  },
+  {
+    id: 7,
+    name: "Bhabani",
+    stars: 5,
+    text: "Amazing experience from start to finish. The team handled our wedding coverage perfectly and delivered beautiful memories that we will cherish forever. Excellent photography skills, cinematic videography, and great customer service. Highly recommended!"
+  },
+  {
+    id: 8,
+    name: "Tiki Sahoo",
+    stars: 5,
+    text: "Choosing this photography team was one of the best decisions for our wedding. They captured every emotion, smile, and special moment beautifully. The entire team was friendly, cooperative, and hardworking. We truly loved the final photos and cinematic wedding film."
+  },
+  {
+    id: 9,
+    name: "Rosemary Spa",
+    stars: 5,
+    text: "Excellent wedding photography service! Beautiful candid shots, cinematic video, and very professional behavior. Thank you for capturing our special day so perfectly. Highly recommended!"
+  },
+  {
+    id: 10,
+    name: "Gautam Isharani",
+    stars: 5,
+    text: "Best Photography and videography at our marriage professional person with good camera knowledge"
+  }
+];
+const MARQUEE_ITEMS = [
+  ...TESTIMONIALS.map((t) => ({ ...t, uid: `a-${t.id}` })),
+  ...TESTIMONIALS.map((t) => ({ ...t, uid: `b-${t.id}` })),
+  ...TESTIMONIALS.map((t) => ({ ...t, uid: `c-${t.id}` }))
+];
+function TestimonialsSection() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    motion.div,
-    {
-      "data-ocid": "testimonials.card",
-      animate: {
-        scale: isActive ? 1 : 0.97,
-        opacity: isActive ? 1 : 0.55
-      },
-      transition: { duration: 0.5 },
-      className: "relative flex-shrink-0 w-full md:w-[380px] lg:w-[440px] p-8 border border-white/[0.07] backdrop-blur-sm bg-[#111111]/70 hover:border-accent/20 transition-colors duration-400",
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "div",
-          {
-            className: "font-display text-7xl text-accent/15 leading-none absolute top-4 right-6",
-            style: { fontFamily: "var(--font-display)" },
-            "aria-hidden": "true",
-            children: "“"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-1 mb-6", children: Array.from({ length: Number(t.rating) }, (_, j) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-          Star,
-          {
-            size: 12,
-            className: "fill-accent text-accent"
-          },
-          j
-        )) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "p",
-          {
-            className: "font-display text-lg italic text-white/75 leading-relaxed mb-8",
-            style: { fontFamily: "var(--font-display)" },
-            children: [
-              "“",
-              t.review,
-              "”"
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4", children: [
-          t.clientImage ? /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "img",
-            {
-              src: t.clientImage,
-              alt: t.clientName,
-              className: "w-11 h-11 rounded-full object-cover border border-accent/20",
-              loading: "lazy"
-            }
-          ) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-11 h-11 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 border border-accent/30 flex items-center justify-center flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-accent", children: t.clientName.charAt(0) }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-white", children: t.clientName }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[10px] tracking-[0.2em] uppercase text-white/30", children: "Client" })
-          ] })
-        ] })
-      ]
-    }
-  );
-}
-function TestimonialsSection({
-  testimonials
-}) {
-  const [active, setActive] = reactExports.useState(0);
-  const [paused, setPaused] = reactExports.useState(false);
-  const trackRef = reactExports.useRef(null);
-  reactExports.useEffect(() => {
-    if (paused || testimonials.length <= 1) return;
-    const id = setInterval(() => {
-      setActive((i) => (i + 1) % testimonials.length);
-    }, 4500);
-    return () => clearInterval(id);
-  }, [paused, testimonials.length]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "section",
     {
       id: "testimonials",
       className: "py-32 lg:py-40 bg-[#0D0D0D] overflow-hidden",
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("style", { children: `
+        @keyframes testimonial-marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-33.333%); }
+        }
+        .testimonial-marquee-track {
+          animation: testimonial-marquee 38s linear infinite;
+        }
+        .testimonial-marquee-track:hover {
+          animation-play-state: paused;
+        }
+      ` }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 mb-14", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
           SectionHeading,
           {
             label: "Client Stories",
@@ -2501,46 +2405,45 @@ function TestimonialsSection({
             centered: true,
             subtitle: "Words from the people who trusted us with their most important moments."
           }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ScrollReveal, { delay: 0.1, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        ) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative flex overflow-hidden select-none", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "testimonial-marquee-track flex shrink-0 items-stretch gap-0", children: MARQUEE_ITEMS.map((t) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "div",
           {
-            className: "relative",
-            onMouseEnter: () => setPaused(true),
-            onMouseLeave: () => setPaused(false),
+            "data-ocid": "testimonials.card",
+            className: "flex-shrink-0 w-[340px] mx-4 p-8 rounded-xl border border-accent/20 bg-[#111111]/80 backdrop-blur-sm flex flex-col justify-between",
             children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "div",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-1 mb-5", children: Array.from({ length: t.stars }, (_, j) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                Star,
                 {
-                  ref: trackRef,
-                  className: "flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide",
-                  style: { scrollbarWidth: "none" },
-                  children: testimonials.map((t, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "div",
-                    {
-                      className: "snap-center flex-shrink-0",
-                      style: { width: "min(440px, 85vw)" },
-                      children: /* @__PURE__ */ jsxRuntimeExports.jsx(TestimonialCard, { t, isActive: i === active })
-                    },
-                    String(t.id)
-                  ))
+                  size: 13,
+                  className: "fill-accent text-accent"
+                },
+                `star-${t.uid}-${j}`
+              )) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                "p",
+                {
+                  className: "text-sm italic text-white/75 leading-relaxed mb-7 line-clamp-5",
+                  style: { fontFamily: "var(--font-display)" },
+                  children: [
+                    "“",
+                    t.text,
+                    "”"
+                  ]
                 }
               ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center gap-2 mt-10", children: testimonials.map((t, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "button",
-                {
-                  type: "button",
-                  "aria-label": `Testimonial ${i + 1}`,
-                  "data-ocid": `testimonials.dot.${i + 1}`,
-                  onClick: () => setActive(i),
-                  className: `rounded-full transition-all duration-400 ${i === active ? "w-8 h-1.5 bg-accent" : "w-1.5 h-1.5 bg-white/20 hover:bg-white/40"}`
-                },
-                String(t.id)
-              )) })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-9 h-9 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 border border-accent/30 flex items-center justify-center flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-semibold text-accent", children: t.name.charAt(0) }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-white", children: t.name }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[10px] tracking-[0.2em] uppercase text-white/30", children: "Verified Client" })
+                ] })
+              ] })
             ]
-          }
-        ) })
-      ] })
+          },
+          t.uid
+        )) }) })
+      ]
     }
   );
 }
@@ -2567,56 +2470,12 @@ const DEFAULT_SERVICES = [
     order: 3n
   }
 ];
-const DEFAULT_TESTIMONIALS = [
-  {
-    id: 1n,
-    clientName: "Rahul Kumar Panda",
-    clientImage: "",
-    review: "Absolutely loved the photography! The pictures were natural, cinematic, and beautifully edited. Highly recommended for weddings and special events.",
-    rating: 5n,
-    order: 1n
-  },
-  {
-    id: 2n,
-    clientName: "Priya Mehta",
-    clientImage: "",
-    review: "Very professional and friendly photographer. The delivery was fast and the quality was outstanding. Everyone in my family loved the photos.",
-    rating: 5n,
-    order: 2n
-  },
-  {
-    id: 3n,
-    clientName: "Aman Verma",
-    clientImage: "",
-    review: "Best photography experience I've had till now. Creative poses, amazing editing, and great attention to detail. Truly premium work!",
-    rating: 5n,
-    order: 3n
-  },
-  {
-    id: 4n,
-    clientName: "Sneha Patel",
-    clientImage: "",
-    review: "Our pre-wedding shoot turned out better than we imagined. The cinematic style and color grading looked absolutely stunning.",
-    rating: 5n,
-    order: 4n
-  },
-  {
-    id: 5n,
-    clientName: "Arjun Mishra",
-    clientImage: "",
-    review: "Highly satisfied with both photography and videography. Every moment was captured perfectly and the final output looked amazing.",
-    rating: 5n,
-    order: 5n
-  }
-];
 function HomePage() {
   const { data: galleryData } = useGalleryImages();
-  const { data: testimonialData } = useTestimonials();
   const { data: serviceData } = useServices();
   const { data: settingsRaw } = useSiteSettings();
   const settings = settingsRaw;
   const saveContact = useSaveContact();
-  const testimonials = testimonialData && testimonialData.length > 0 ? testimonialData : DEFAULT_TESTIMONIALS;
   const services = serviceData && serviceData.length > 0 ? serviceData : DEFAULT_SERVICES;
   const heroHeading = (settings == null ? void 0 : settings.heroHeading) ?? "Capturing Moments, Creating Memories";
   const heroSubheading = (settings == null ? void 0 : settings.heroSubheading) ?? "cinematic photography & events based in Cuttack, Odisha.";
@@ -2626,7 +2485,7 @@ function HomePage() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(AboutSection, { settings, aboutText }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(ServicesSection, { services }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(ShowcaseSection, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(TestimonialsSection, { testimonials }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(TestimonialsSection, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(EquipmentSection, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(GallerySection, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(CtaSection, {}),

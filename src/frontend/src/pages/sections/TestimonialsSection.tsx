@@ -1,154 +1,148 @@
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import type { Testimonial } from "@/lib/types";
 import { Star } from "lucide-react";
-import { motion } from "motion/react";
-import { useEffect, useRef, useState } from "react";
 
-interface TestimonialsSectionProps {
-  testimonials: Testimonial[];
-}
+const TESTIMONIALS = [
+  {
+    id: 1,
+    name: "Rinki Sahoo",
+    stars: 5,
+    text: "Budget friendly photography and quality is super",
+  },
+  {
+    id: 2,
+    name: "Guruprasad Behera",
+    stars: 5,
+    text: "Best capturing of moments by their professional team",
+  },
+  {
+    id: 3,
+    name: "Trilochan Pradhan",
+    stars: 5,
+    text: "Excellent service by the photography team and the owner Kiran is best as he gave full effort",
+  },
+  {
+    id: 4,
+    name: "Lucky Pradhan",
+    stars: 5,
+    text: "Good service with best budget and quality is also best",
+  },
+  {
+    id: 5,
+    name: "dasventures",
+    stars: 5,
+    text: "The quality of work was truly outstanding. From pre-wedding moments to the final wedding rituals, everything was captured beautifully. The cinematic wedding film looked like a movie. We are extremely satisfied with the photos, album design, and overall experience.",
+  },
+  {
+    id: 6,
+    name: "Kalpana Sahoo",
+    stars: 5,
+    text: "You are a true artist! I can't believe how amazing this turned out. You really caught the perfect moment. I'm so impressed with this. Wow, these photos and the video are just beautiful! Thank you so much for your hard work.",
+  },
+  {
+    id: 7,
+    name: "Bhabani",
+    stars: 5,
+    text: "Amazing experience from start to finish. The team handled our wedding coverage perfectly and delivered beautiful memories that we will cherish forever. Excellent photography skills, cinematic videography, and great customer service. Highly recommended!",
+  },
+  {
+    id: 8,
+    name: "Tiki Sahoo",
+    stars: 5,
+    text: "Choosing this photography team was one of the best decisions for our wedding. They captured every emotion, smile, and special moment beautifully. The entire team was friendly, cooperative, and hardworking. We truly loved the final photos and cinematic wedding film.",
+  },
+  {
+    id: 9,
+    name: "Rosemary Spa",
+    stars: 5,
+    text: "Excellent wedding photography service! Beautiful candid shots, cinematic video, and very professional behavior. Thank you for capturing our special day so perfectly. Highly recommended!",
+  },
+  {
+    id: 10,
+    name: "Gautam Isharani",
+    stars: 5,
+    text: "Best Photography and videography at our marriage professional person with good camera knowledge",
+  },
+];
 
-function TestimonialCard({
-  t,
-  isActive,
-}: { t: Testimonial; isActive: boolean }) {
-  return (
-    <motion.div
-      data-ocid="testimonials.card"
-      animate={{
-        scale: isActive ? 1 : 0.97,
-        opacity: isActive ? 1 : 0.55,
-      }}
-      transition={{ duration: 0.5 }}
-      className="relative flex-shrink-0 w-full md:w-[380px] lg:w-[440px] p-8 border border-white/[0.07] backdrop-blur-sm bg-[#111111]/70 hover:border-accent/20 transition-colors duration-400"
-    >
-      {/* Quote mark */}
-      <div
-        className="font-display text-7xl text-accent/15 leading-none absolute top-4 right-6"
-        style={{ fontFamily: "var(--font-display)" }}
-        aria-hidden="true"
-      >
-        &#8220;
-      </div>
+const MARQUEE_ITEMS = [
+  ...TESTIMONIALS.map((t) => ({ ...t, uid: `a-${t.id}` })),
+  ...TESTIMONIALS.map((t) => ({ ...t, uid: `b-${t.id}` })),
+  ...TESTIMONIALS.map((t) => ({ ...t, uid: `c-${t.id}` })),
+];
 
-      {/* Stars */}
-      <div className="flex gap-1 mb-6">
-        {Array.from({ length: Number(t.rating) }, (_, j) => (
-          <Star
-            // biome-ignore lint/suspicious/noArrayIndexKey: static star rating display
-            key={j}
-            size={12}
-            className="fill-accent text-accent"
-          />
-        ))}
-      </div>
-
-      <p
-        className="font-display text-lg italic text-white/75 leading-relaxed mb-8"
-        style={{ fontFamily: "var(--font-display)" }}
-      >
-        &ldquo;{t.review}&rdquo;
-      </p>
-
-      {/* Client */}
-      <div className="flex items-center gap-4">
-        {t.clientImage ? (
-          <img
-            src={t.clientImage}
-            alt={t.clientName}
-            className="w-11 h-11 rounded-full object-cover border border-accent/20"
-            loading="lazy"
-          />
-        ) : (
-          <div className="w-11 h-11 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 border border-accent/30 flex items-center justify-center flex-shrink-0">
-            <span className="text-sm font-semibold text-accent">
-              {t.clientName.charAt(0)}
-            </span>
-          </div>
-        )}
-        <div>
-          <p className="text-sm font-semibold text-white">{t.clientName}</p>
-          <p className="text-[10px] tracking-[0.2em] uppercase text-white/30">
-            Client
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
-export function TestimonialsSection({
-  testimonials,
-}: TestimonialsSectionProps) {
-  const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  // Auto-advance
-  useEffect(() => {
-    if (paused || testimonials.length <= 1) return;
-    const id = setInterval(() => {
-      setActive((i) => (i + 1) % testimonials.length);
-    }, 4500);
-    return () => clearInterval(id);
-  }, [paused, testimonials.length]);
-
+export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
       className="py-32 lg:py-40 bg-[#0D0D0D] overflow-hidden"
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
+      <style>{`
+        @keyframes testimonial-marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-33.333%); }
+        }
+        .testimonial-marquee-track {
+          animation: testimonial-marquee 38s linear infinite;
+        }
+        .testimonial-marquee-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 mb-14">
         <SectionHeading
           label="Client Stories"
           title="Testimonials"
           centered
           subtitle="Words from the people who trusted us with their most important moments."
         />
+      </div>
 
-        {/* Carousel */}
-        <ScrollReveal delay={0.1}>
-          <div
-            className="relative"
-            onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
-          >
+      {/* Horizontal scrolling marquee */}
+      <div className="relative flex overflow-hidden select-none">
+        <div className="testimonial-marquee-track flex shrink-0 items-stretch gap-0">
+          {MARQUEE_ITEMS.map((t) => (
             <div
-              ref={trackRef}
-              className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
-              style={{ scrollbarWidth: "none" }}
+              key={t.uid}
+              data-ocid="testimonials.card"
+              className="flex-shrink-0 w-[340px] mx-4 p-8 rounded-xl border border-accent/20 bg-[#111111]/80 backdrop-blur-sm flex flex-col justify-between"
             >
-              {testimonials.map((t, i) => (
-                <div
-                  key={String(t.id)}
-                  className="snap-center flex-shrink-0"
-                  style={{ width: "min(440px, 85vw)" }}
-                >
-                  <TestimonialCard t={t} isActive={i === active} />
-                </div>
-              ))}
-            </div>
+              {/* Stars */}
+              <div className="flex gap-1 mb-5">
+                {Array.from({ length: t.stars }, (_, j) => (
+                  <Star
+                    key={`star-${t.uid}-${j}`}
+                    size={13}
+                    className="fill-accent text-accent"
+                  />
+                ))}
+              </div>
 
-            {/* Dots */}
-            <div className="flex justify-center gap-2 mt-10">
-              {testimonials.map((t, i) => (
-                <button
-                  key={String(t.id)}
-                  type="button"
-                  aria-label={`Testimonial ${i + 1}`}
-                  data-ocid={`testimonials.dot.${i + 1}`}
-                  onClick={() => setActive(i)}
-                  className={`rounded-full transition-all duration-400 ${
-                    i === active
-                      ? "w-8 h-1.5 bg-accent"
-                      : "w-1.5 h-1.5 bg-white/20 hover:bg-white/40"
-                  }`}
-                />
-              ))}
+              {/* Quote text */}
+              <p
+                className="text-sm italic text-white/75 leading-relaxed mb-7 line-clamp-5"
+                style={{ fontFamily: "var(--font-display)" }}
+              >
+                &ldquo;{t.text}&rdquo;
+              </p>
+
+              {/* Client info */}
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 border border-accent/30 flex items-center justify-center flex-shrink-0">
+                  <span className="text-xs font-semibold text-accent">
+                    {t.name.charAt(0)}
+                  </span>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">{t.name}</p>
+                  <p className="text-[10px] tracking-[0.2em] uppercase text-white/30">
+                    Verified Client
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   );

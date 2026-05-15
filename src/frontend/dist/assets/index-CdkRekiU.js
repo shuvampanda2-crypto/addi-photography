@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/Home-B45itIfc.js","assets/proxy-CbCgzUOk.js","assets/queries-DDd_pkAg.js","assets/galleryData-DMFnxkxo.js","assets/Admin-Dpjpy3jf.js","assets/arrow-left-arU486Db.js","assets/GalleryPage-CWDdnnRH.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/Home-D-LTcC74.js","assets/proxy-Ra_7zoqw.js","assets/queries-BM1XOuhf.js","assets/galleryData-COaqjaa-.js","assets/Admin-S33HmtTe.js","assets/arrow-left-CbUtE5C1.js","assets/GalleryPage-CTU4txb_.js"])))=>i.map(i=>d[i]);
 var __defProp = Object.defineProperty;
 var __typeError = (msg) => {
   throw TypeError(msg);
@@ -32338,13 +32338,13 @@ const queryClient$1 = new QueryClient({
   }
 });
 const HomePage = reactExports.lazy(
-  () => __vitePreload(() => import("./Home-B45itIfc.js"), true ? __vite__mapDeps([0,1,2,3]) : void 0).then((m2) => ({ default: m2.HomePage }))
+  () => __vitePreload(() => import("./Home-D-LTcC74.js"), true ? __vite__mapDeps([0,1,2,3]) : void 0).then((m2) => ({ default: m2.HomePage }))
 );
 const AdminPage = reactExports.lazy(
-  () => __vitePreload(() => import("./Admin-Dpjpy3jf.js"), true ? __vite__mapDeps([4,2,1,5]) : void 0).then((m2) => ({ default: m2.AdminPage }))
+  () => __vitePreload(() => import("./Admin-S33HmtTe.js"), true ? __vite__mapDeps([4,2,1,5]) : void 0).then((m2) => ({ default: m2.AdminPage }))
 );
 const GalleryPage = reactExports.lazy(
-  () => __vitePreload(() => import("./GalleryPage-CWDdnnRH.js"), true ? __vite__mapDeps([6,3,1,5]) : void 0).then((m2) => ({ default: m2.GalleryPage }))
+  () => __vitePreload(() => import("./GalleryPage-CTU4txb_.js"), true ? __vite__mapDeps([6,3,1,5]) : void 0).then((m2) => ({ default: m2.GalleryPage }))
 );
 const rootRoute = createRootRoute({
   component: () => /* @__PURE__ */ jsxRuntimeExports.jsxs(QueryClientProvider, { client: queryClient$1, children: [
